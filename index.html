@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRAIGLIST // TECH & EXPLOITS</title>
+    <title>Craiglist | Expert Tech Reviews & RF Analysis</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -101,70 +101,44 @@
         }
         window.onload = typeWriter;
 
-        // 2. 3D Tilt Effect for Cards
-        const cards = document.querySelectorAll('.card, .item-card');
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
+        // 2. Mobile-Friendly Scroll Reveal
+        const scrollCards = document.querySelectorAll('.card, .item-card');
+        const observerOptions = { threshold: 0.15 };
 
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0) scale(1)";
+                }
             });
+        }, observerOptions);
 
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-            });
+        scrollCards.forEach(card => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(20px) scale(0.95)";
+            card.style.transition = "all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+            observer.observe(card);
         });
-// 2. Mobile-Friendly Interaction (Scroll Reveal)
-const cards = document.querySelectorAll('.card, .item-card, .featured-pick');
 
-const observerOptions = {
-    threshold: 0.2
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0) scale(1)";
+        // 3. Desktop 3D Tilt Effect
+        if (window.matchMedia("(min-width: 769px)").matches) {
+            scrollCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 15;
+                    const rotateY = (centerX - x) / 15;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                });
+            });
         }
-    });
-}, observerOptions);
-
-cards.forEach(card => {
-    // Set initial state for "pop-in" effect
-    card.style.opacity = "0";
-    card.style.transform = "translateY(20px) scale(0.95)";
-    card.style.transition = "all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
-    observer.observe(card);
-});
-
-// 3. Keep Desktop 3D Tilt (Only if mouse exists)
-if (window.matchMedia("(min-width: 769px)").matches) {
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / 15;
-            const rotateY = (centerX - x) / 15;
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-        });
-    });
-}
-        
     </script>
 </body>
 </html>

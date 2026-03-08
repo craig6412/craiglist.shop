@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Arsenal // Craiglist.shop</title>
+    <title>The Arsenal | Curated Tech Gear by Craig Dominic</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -27,7 +27,7 @@
             <p class="subtitle">A curated selection of the gear I trust for telecommunications, RF analysis, and high-performance computing.</p>
         </section>
 
-        <section class="featured-pick">
+        <section class="featured-pick reveal">
             <div class="pick-badge">#01 // PERFORMANCE CORE</div>
             <div class="pick-content">
                 <div class="pick-info">
@@ -46,7 +46,7 @@
             </div>
         </section>
 
-        <section class="featured-pick">
+        <section class="featured-pick reveal">
             <div class="pick-badge">#02 // RF ANALYSIS</div>
             <div class="pick-content">
                 <div class="pick-info">
@@ -65,7 +65,7 @@
             </div>
         </section>
 
-        <section class="featured-pick">
+        <section class="featured-pick reveal">
             <div class="pick-badge">#03 // FIELD SECURITY</div>
             <div class="pick-content">
                 <div class="pick-info">
@@ -92,5 +92,26 @@
         </div>
     </footer>
 
+    <script>
+        // Scroll Reveal Animation Logic
+        const revealElements = document.querySelectorAll('.reveal');
+        const observerOptions = { threshold: 0.1 };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
