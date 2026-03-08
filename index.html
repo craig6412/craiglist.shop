@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRAIGLIST // TECH & EXPLOITS</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="scanline"></div>
-    
-    <header>
+    <div class="grid-overlay"></div> <header>
         <nav>
-            <div class="logo">CRAIGLIST<span>.SHOP</span></div>
+            <div class="logo">CRAIGLIST<span class="cursor-blink">.SHOP</span></div>
             <ul>
-                <li><a href="#blog">INTEL</a></li>
-                <li><a href="#gear">ARSENAL</a></li>
-                <li><a href="#about">TERMINAL</a></li>
+                <li><a href="#blog" class="nav-link">INTEL</a></li>
+                <li><a href="#gear" class="nav-link">ARSENAL</a></li>
+                <li><a href="#about" class="nav-link">TERMINAL</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>SYSTEM OVERRIDE</h1>
-            <p class="subtitle">Exploring the frontier of Gadgets, Hacking, and Tech Culture.</p>
-            <div class="glitch-wrapper">
-                <a href="#blog" class="btn">ACCESS DATABASE</a>
+            <h1 class="glitch" data-text="SYSTEM OVERRIDE">SYSTEM OVERRIDE</h1>
+            <p class="subtitle" id="typewriter"></p>
+            <div class="hero-actions">
+                <a href="#blog" class="btn-primary">ACCESS DATABASE</a>
             </div>
         </div>
     </section>
@@ -54,13 +53,17 @@
             <h2 class="section-title">TECH ARSENAL</h2>
             <div class="grid">
                 <div class="item-card">
-                    <div class="item-img">[IMAGE]</div>
+                    <div class="item-img-placeholder">
+                        <span class="glitch-text">HW_001</span>
+                    </div>
                     <h4>Mechanical Keyboard V3</h4>
                     <p>The click that fuels the code.</p>
                     <a href="#" class="btn-sm">VIEW ON AMAZON</a>
                 </div>
                 <div class="item-card">
-                    <div class="item-img">[IMAGE]</div>
+                    <div class="item-img-placeholder">
+                        <span class="glitch-text">HW_002</span>
+                    </div>
                     <h4>USB Rubber Ducky</h4>
                     <p>Essential tool for physical pen-testing.</p>
                     <a href="#" class="btn-sm">VIEW ON AMAZON</a>
@@ -69,8 +72,50 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 CRAIGLIST // ESTABLISHED IN THE GRID</p>
+    <footer id="about">
+        <div class="footer-content">
+            <p class="disclaimer">NOT AFFILIATED WITH CRAIGSLIST.ORG // PERSONAL TECH BLOG BY CRAIG DOMINIC</p>
+            <p>&copy; 2026 CRAIGLIST // ESTABLISHED IN THE GRID</p>
+        </div>
     </footer>
+
+    <script>
+        // 1. Typewriter Effect
+        const text = "Exploring the frontier of Gadgets, Hacking, and Tech Culture.";
+        let i = 0;
+        const speed = 40; 
+        const target = document.getElementById('typewriter');
+
+        function typeWriter() {
+            if (i < text.length) {
+                target.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        window.onload = typeWriter;
+
+        // 2. 3D Tilt Effect for Cards
+        const cards = document.querySelectorAll('.card, .item-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            });
+        });
+    </script>
 </body>
 </html>
