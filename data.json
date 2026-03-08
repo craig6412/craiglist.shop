@@ -26,5 +26,20 @@
           "includes": "Dipole Antenna Kit"
       }
     }
-  ]
-}
+    {
+	  "id": "03",
+	  "category": "FIELD PROTECTION",
+	  "name": "Pelican 1495 Laptop Case",
+	  "link": "https://amzn.to/3OWAMEW",
+	  "description": "The ultimate vault for mobile workstations. Crushproof, watertight, and dustproof protection for the Strix G16 when moving between field sites.",
+	  "specs": {
+	    "compatibility": "Up to 17\" Laptops",
+	    "security": "3-Dial Combo Lock",
+	    "rating": "IP67 (Water & Dust)",
+	    "interior": "Pick N Pluck Foam"
+  }
+
+
+
+  
+  }
