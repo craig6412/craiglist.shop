@@ -9,15 +9,15 @@
 </head>
 <body>
     <div class="scanline"></div>
-    <div class="grid-overlay"></div> <header>
+    <div class="grid-overlay"></div> 
+    
+    <header>
         <nav>
             <div class="logo">CRAIGLIST<span class="cursor-blink">.SHOP</span></div>
             <ul>
-                <li><a href="#blog" class="nav-link">INTEL</a></li>
+                <li><a href="#intel" class="nav-link">INTEL</a></li>
                 <li><a href="arsenal.html" class="nav-link">ARSENAL</a></li>
-                <li><a href="#reviews">REVIEWS</a></li>
-                <li><a href="#top-picks">TOP PICKS</a></li>
-                <li><a href="about.html">ABOUT</a></li> </ul>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
             </ul>
         </nav>
     </header>
@@ -27,56 +27,60 @@
             <h1 class="glitch" data-text="SYSTEM OVERRIDE">SYSTEM OVERRIDE</h1>
             <p class="subtitle" id="typewriter"></p>
             <div class="hero-actions">
-                <a href="#blog" class="btn-primary">ACCESS DATABASE</a>
+                <a href="#loadout" class="btn-primary">ACCESS LOADOUT</a>
             </div>
         </div>
     </section>
 
     <main>
-        <section id="blog">
+        <section id="loadout">
+            <h2 class="section-title">CURRENT LOADOUT</h2>
+            <div class="grid">
+                <div class="item-card featured-item">
+                    <div class="tag">#1 PICK // PERFORMANCE CORE</div>
+                    <h3>ASUS ROG Strix G16 (2024)</h3>
+                    <p>My primary workstation. The i9-14900HX handles complex builds and RF analysis without breaking a sweat.</p>
+                    <a href="https://amzn.to/4rkGbmH" target="_blank" class="btn-primary" style="margin-top: 2rem;">VIEW ON AMAZON</a>
+                </div>
+
+                <div class="item-card">
+                    <div class="tag">RF ANALYSIS</div>
+                    <h3>RTL-SDR Blog V4</h3>
+                    <p>The gold standard for wide-band signal monitoring. Essential for any serious RF home lab.</p>
+                    <a href="https://amzn.to/3Fos7P3" target="_blank" class="btn-sm">VIEW ON AMAZON</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="arsenal.html" class="nav-link" style="font-size: 1rem; border-bottom: 1px solid var(--primary);">EXPLORE FULL ARSENAL &rarr;</a>
+            </div>
+        </section>
+
+        <section id="intel">
             <h2 class="section-title">LATEST INTEL</h2>
             <div class="grid">
                 <article class="card">
-                    <div class="tag">HACKING</div>
-                    <h3>The Flipper Zero Starter Guide</h3>
-                    <p>Why this "tamagotchi for hackers" is still the king of pocket gadgets.</p>
+                    <div class="tag">NETWORKING</div>
+                    <h3>Setup Your Own Home Lab</h3>
+                    <p>Building a fortress for testing and learning network security with pro-grade gear.</p>
                     <a href="#" class="read-more">Read Log_001.txt</a>
                 </article>
                 <article class="card">
-                    <div class="tag">CYBERSEC</div>
-                    <h3>Setup Your Own Home Lab</h3>
-                    <p>Building a fortress for testing and learning network security.</p>
+                    <div class="tag">RF_EXP</div>
+                    <h3>SDR Hardware: Hidden Gems</h3>
+                    <p>Testing the top-rated software defined radios available on the market right now.</p>
                     <a href="#" class="read-more">Read Log_002.txt</a>
                 </article>
             </div>
         </section>
-
-        <section id="gear">
-            <h2 class="section-title">TECH ARSENAL</h2>
-            <div class="grid">
-                <div class="item-card">
-                    <div class="item-img-placeholder">
-                        <span class="glitch-text">HW_001</span>
-                    </div>
-                    <h4>Mechanical Keyboard V3</h4>
-                    <p>The click that fuels the code.</p>
-                    <a href="#" class="btn-sm">VIEW ON AMAZON</a>
-                </div>
-                <div class="item-card">
-                    <div class="item-img-placeholder">
-                        <span class="glitch-text">HW_002</span>
-                    </div>
-                    <h4>USB Rubber Ducky</h4>
-                    <p>Essential tool for physical pen-testing.</p>
-                    <a href="#" class="btn-sm">VIEW ON AMAZON</a>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer id="about">
+    <footer>
         <div class="footer-content">
             <p class="disclaimer">NOT AFFILIATED WITH CRAIGSLIST.ORG // PERSONAL TECH BLOG BY CRAIG DOMINIC</p>
+            <p class="affiliate-disclosure" style="font-size: 0.6rem; opacity: 0.5; margin-bottom: 1rem;">
+                As an Amazon Associate, I earn from qualifying purchases.
+            </p>
             <p>&copy; 2026 CRAIGLIST // ESTABLISHED IN THE GRID</p>
         </div>
     </footer>
