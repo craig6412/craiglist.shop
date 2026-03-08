@@ -35,21 +35,7 @@
     <main>
         <section id="loadout">
             <h2 class="section-title">CURRENT LOADOUT</h2>
-            <div class="grid">
-                <div class="item-card featured-item">
-                    <div class="tag">#1 PICK // PERFORMANCE CORE</div>
-                    <h3>ASUS ROG Strix G16 (2024)</h3>
-                    <p>My primary workstation. The i9-14900HX handles complex builds and RF analysis without breaking a sweat.</p>
-                    <a href="https://amzn.to/4rkGbmH" target="_blank" class="btn-primary" style="margin-top: 2rem;">VIEW ON AMAZON</a>
-                </div>
-
-                <div class="item-card">
-                    <div class="tag">RF ANALYSIS</div>
-                    <h3>RTL-SDR Blog V4</h3>
-                    <p>The gold standard for wide-band signal monitoring. Essential for any serious RF home lab.</p>
-                    <a href="https://amzn.to/3Fos7P3" target="_blank" class="btn-sm">VIEW ON AMAZON</a>
-                </div>
-            </div>
+            <div id="homepage-loadout-grid" class="grid"></div>
             
             <div style="text-align: center; margin-top: 4rem;">
                 <a href="arsenal.html" class="nav-link" style="font-size: 1rem; border-bottom: 1px solid var(--primary);">EXPLORE FULL ARSENAL &rarr;</a>
@@ -64,12 +50,6 @@
                     <h3>Setup Your Own Home Lab</h3>
                     <p>Building a fortress for testing and learning network security with pro-grade gear.</p>
                     <a href="#" class="read-more">Read Log_001.txt</a>
-                </article>
-                <article class="card">
-                    <div class="tag">RF_EXP</div>
-                    <h3>SDR Hardware: Hidden Gems</h3>
-                    <p>Testing the top-rated software defined radios available on the market right now.</p>
-                    <a href="#" class="read-more">Read Log_002.txt</a>
                 </article>
             </div>
         </section>
@@ -86,58 +66,70 @@
     </footer>
 
     <script>
-        // 1. Typewriter Effect
+        // 1. Fetch JSON Data and Populate Homepage
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const grid = document.getElementById('homepage-loadout-grid');
+                // We only want the first 2 items for the homepage
+                const topTwo = data.loadout.slice(0, 2);
+
+                topTwo.forEach((item, index) => {
+                    const card = document.createElement('div');
+                    card.className = index === 0 ? 'item-card featured-item' : 'item-card';
+                    card.innerHTML = `
+                        <div class="tag">${index === 0 ? '#1 PICK // ' : ''}${item.category}</div>
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                        <a href="${item.link}" target="_blank" class="${index === 0 ? 'btn-primary' : 'btn-sm'}" style="margin-top: 2rem;">VIEW ON AMAZON</a>
+                    `;
+                    grid.appendChild(card);
+                    // Initialize animations for new cards
+                    observeCard(card);
+                });
+            });
+
+        // 2. Typewriter Effect
         const text = "Exploring the frontier of Gadgets, Hacking, and Tech Culture.";
         let i = 0;
-        const speed = 40; 
         const target = document.getElementById('typewriter');
-
         function typeWriter() {
             if (i < text.length) {
                 target.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(typeWriter, speed);
+                setTimeout(typeWriter, 40);
             }
         }
         window.onload = typeWriter;
 
-        // 2. Mobile-Friendly Scroll Reveal
-        const scrollCards = document.querySelectorAll('.card, .item-card');
-        const observerOptions = { threshold: 0.15 };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0) scale(1)";
-                }
-            });
-        }, observerOptions);
-
-        scrollCards.forEach(card => {
+        // 3. Animation Logic (Scroll Reveal & 3D Tilt)
+        function observeCard(card) {
             card.style.opacity = "0";
             card.style.transform = "translateY(20px) scale(0.95)";
             card.style.transition = "all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0) scale(1)";
+                    }
+                });
+            }, { threshold: 0.15 });
+            
             observer.observe(card);
-        });
 
-        // 3. Desktop 3D Tilt Effect
-        if (window.matchMedia("(min-width: 769px)").matches) {
-            scrollCards.forEach(card => {
+            if (window.matchMedia("(min-width: 769px)").matches) {
                 card.addEventListener('mousemove', (e) => {
                     const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
-                    const rotateX = (y - centerY) / 15;
-                    const rotateY = (centerX - x) / 15;
+                    const rotateX = (e.clientY - rect.top - rect.height/2) / 15;
+                    const rotateY = (rect.width/2 - (e.clientX - rect.left)) / 15;
                     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
                 });
                 card.addEventListener('mouseleave', () => {
                     card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
                 });
-            });
+            }
         }
     </script>
 </body>

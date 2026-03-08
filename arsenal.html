@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Arsenal | Curated Tech Gear by Craig Dominic</title>
+    <title>The Arsenal | Curated Tech Gear</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,94 +24,36 @@
         <section class="arsenal-header">
             <h2 class="section-label" style="margin-top:4rem;">HARDWARE MANIFEST</h2>
             <h1>The Arsenal</h1>
-            <p class="subtitle">A curated selection of the gear I trust for telecommunications, RF analysis, and high-performance computing.</p>
+            <p class="subtitle">My full technical inventory for field work and development.</p>
         </section>
 
-        <section class="featured-pick reveal">
-            <div class="pick-badge">#01 // PERFORMANCE CORE</div>
-            <div class="pick-content">
-                <div class="pick-info">
-                    <h2>ASUS ROG Strix G16 (2024)</h2>
-                    <p class="pick-description">
-                        This is my primary workstation for heavy lifting. With the <strong>Intel Core i9-14900HX</strong> and <strong>RTX 4060</strong>, it handles complex code compiles and network simulations without breaking a sweat.
-                    </p>
-                    <ul class="spec-list">
-                        <li><strong>CPU:</strong> Intel Core i9-14900HX (24 Cores)</li>
-                        <li><strong>GPU:</strong> NVIDIA RTX 4060 (140W TGP)</li>
-                        <li><strong>Display:</strong> 16" QHD+ 240Hz Nebula</li>
-                        <li><strong>Build:</strong> Tri-Fan Cooling System</li>
-                    </ul>
-                    <a href="https://amzn.to/4rkGbmH" target="_blank" class="btn-amazon">VIEW ON AMAZON</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-pick reveal">
-            <div class="pick-badge">#02 // RF ANALYSIS</div>
-            <div class="pick-content">
-                <div class="pick-info">
-                    <h2>RTL-SDR Blog V4 Kit</h2>
-                    <p class="pick-description">
-                        The gold standard for wide-band signal monitoring. The V4 features a <strong>built-in upconverter</strong> for superior HF reception and triplexed filtering to block out broadcast interference.
-                    </p>
-                    <ul class="spec-list">
-                        <li><strong>Range:</strong> 500 kHz – 1.766 GHz</li>
-                        <li><strong>Stability:</strong> 1PPM TCXO</li>
-                        <li><strong>Tuner:</strong> R828D with triplexer</li>
-                        <li><strong>Includes:</strong> Dipole Antenna Kit</li>
-                    </ul>
-                    <a href="https://amzn.to/3Fos7P3" target="_blank" class="btn-amazon">VIEW ON AMAZON</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-pick reveal">
-            <div class="pick-badge">#03 // FIELD SECURITY</div>
-            <div class="pick-content">
-                <div class="pick-info">
-                    <h2>GL.iNet GL-MT3000 (Beryl AX)</h2>
-                    <p class="pick-description">
-                        The ultimate pocket-sized <strong>Wi-Fi 6</strong> travel router. It runs on OpenWrt and handles <strong>WireGuard VPN</strong> at speeds up to 300 Mbps, ensuring a secure connection anywhere in the field.
-                    </p>
-                    <ul class="spec-list">
-                        <li><strong>Port:</strong> 2.5G Multi-Gigabit WAN</li>
-                        <li><strong>VPN:</strong> WireGuard & OpenVPN</li>
-                        <li><strong>OS:</strong> Pre-installed OpenWrt</li>
-                        <li><strong>Security:</strong> WPA3 & AdGuard Home</li>
-                    </ul>
-                    <a href="https://amzn.to/44I6xWp" target="_blank" class="btn-amazon">VIEW ON AMAZON</a>
-                </div>
-            </div>
-        </section>
+        <div id="arsenal-list"></div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p class="affiliate-disclosure"><strong>Earnings Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases. This supports the independent testing on this site.</p>
-            <p>&copy; 2026 Craig Dominic // Craiglist.shop</p>
-        </div>
-    </footer>
-
     <script>
-        // Scroll Reveal Animation Logic
-        const revealElements = document.querySelectorAll('.reveal');
-        const observerOptions = { threshold: 0.1 };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('arsenal-list');
+                data.loadout.forEach(item => {
+                    const section = document.createElement('section');
+                    section.className = 'featured-pick reveal';
+                    section.innerHTML = `
+                        <div class="pick-badge">#${item.id} // ${item.category}</div>
+                        <div class="pick-content">
+                            <div class="pick-info">
+                                <h2>${item.name}</h2>
+                                <p class="pick-description">${item.description}</p>
+                                <ul class="spec-list">
+                                    ${Object.entries(item.specs).map(([key, val]) => `<li><strong>${key.toUpperCase()}:</strong> ${val}</li>`).join('')}
+                                </ul>
+                                <a href="${item.link}" target="_blank" class="btn-amazon">VIEW ON AMAZON</a>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(section);
+                });
             });
-        }, observerOptions);
-
-        revealElements.forEach(el => {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(30px)";
-            el.style.transition = "all 0.8s ease-out";
-            observer.observe(el);
-        });
     </script>
 </body>
 </html>
