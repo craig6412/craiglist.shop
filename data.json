@@ -1,7 +1,7 @@
 {
   "loadout": [
     {
-     "id": "01",
+      "id": "01",
       "category": "PERFORMANCE CORE",
       "name": "ASUS ROG Strix G16 (2024)",
       "image": "images/AsusLaptop2025.jpg",
@@ -15,7 +15,7 @@
       }
     },
     {
-        "id": "02",
+      "id": "02",
       "category": "ESPORTS INPUT",
       "name": "Razer Huntsman V3 Pro TKL",
       "image": "images/razerhuntsman.jpeg",
@@ -29,7 +29,7 @@
       }
     },
     {
-     "id": "03",
+      "id": "03",
       "category": "INTERFACE SURFACE",
       "name": "ASUS ROG Scabbard II (XXL)",
       "image": "images/asusscabbard.jpeg",
@@ -43,21 +43,21 @@
       }
     },
     {
-       "id": "04",
-  "category": "TACTICAL CARRY",
-  "name": "Wenger Synergy Wheeled Backpack",
-  "image": "images/wengersynergy.jpeg",
-  "link": "https://www.amazon.com/Wenger-Luggage-Synergy-Wheeled-Backpack/dp/B0776XWBKN?tag=cungaro623-20",
-  "description": "The ultimate hybrid for heavy hardware. Combines the organization of a tactical backpack with the mobility of a roller, perfect for transporting the G16 through airports or job sites.",
-  "specs": {
-    "mobility": "Easy-Glide Wheels & Telescopic Handle",
-    "protection": "Triple Protect Padded Compartment",
-    "storage": "Essentials Organizer & Tablet Pocket",
-    "comfort": "Shock-Absorbing Shoulder Straps"
+      "id": "04",
+      "category": "TACTICAL CARRY",
+      "name": "Wenger Synergy Wheeled Backpack",
+      "image": "images/wengersynergy.jpeg",
+      "link": "https://www.amazon.com/Wenger-Luggage-Synergy-Wheeled-Backpack/dp/B0776XWBKN?tag=cungaro623-20",
+      "description": "The ultimate hybrid for heavy hardware. Combines the organization of a tactical backpack with the mobility of a roller, perfect for transporting the G16 through airports or job sites.",
+      "specs": {
+        "mobility": "Easy-Glide Wheels & Telescopic Handle",
+        "protection": "Triple Protect Padded Compartment",
+        "storage": "Essentials Organizer & Tablet Pocket",
+        "comfort": "Shock-Absorbing Shoulder Straps"
       }
     },
     {
-          "id": "05",
+      "id": "05",
       "category": "DUAL BOOT DRIVE",
       "name": "SanDisk Extreme PRO Dual Luxe",
       "image": "images/sandiskdual.jpeg",
@@ -68,7 +68,6 @@
         "read_speed": "Up to 1,000MB/s",
         "construction": "All-Metal Swivel Heatsink",
         "capacity": "256GB High-Speed"
-
       }
     },
     {
@@ -86,7 +85,7 @@
       }
     },
     {
-       "id": "07",
+      "id": "07",
       "category": "TECH ORGANIZATION",
       "name": "Peak Design Tech Pouch",
       "image": "images/peakpouch.jpeg",
@@ -96,20 +95,21 @@
         "material": "400D Weatherproof Nylon",
         "volume": "2L Capacity",
         "design": "Origami Fold Organization",
-        "charging": "Cable Pass-Through"      }
+        "charging": "Cable Pass-Through"
+      }
     },
     {
-    "id": "08",
-  "category": "PRECISION INPUT",
-  "name": "ASUS ROG Harpe Ace Extreme",
-  "image": "images/harpeaceextreme.jpeg",
-  "link": "https://www.amazon.com/ASUS-ROG-Wireless-Lightweight-AimPoint/dp/B0D65GJF7C?crid=1TH6AOM806UQR&dib=eyJ2IjoiMSJ9.cjB35Zr-vd0Sh-rgV5v_Xm3eoBiuMIOzFgfZ0uB_4-fZnz2FyyaHaxzk2L-RfW0KDWlTGDpaYv-JqS6QqAz6y8bdsB19u8gTwxqC20DOjwfOTMa_3b_dTXVYvPEp_dKY9WuxaiGg73OaKOUMzGugZTjYBN58eGsj1RFSMxpyZXDiG1BxvukT28dtfQZC_sjr5BhsQITHjsCPApfUw64YBeYT23yUpQi9FLUiBVL27VA.YevA8DeyHnhyO4_xVtmjE-oyA_7-DdmFUAlUi_feq2k&dib_tag=se&keywords=asus%2Brog%2Bharpe%2Bace%2B2%2Bextreme&qid=1773029311&sprefix=asus%2Brog%2Bharpe%2Bace%2B2%2Bextreme%2Caps%2C175&sr=8-1&th=1&linkCode=ll2&tag=cungaro623-20&linkId=0084a5deb169ca925268965e12980fde&language=en_US&ref_=as_li_ss_tl",
-  "description": "The peak of precision engineering. A 47g carbon fiber shell housing a 42K DPI sensor with track-on-glass technology for flawless performance in any field environment.",
-  "specs": {
-    "material": "Carbon Fiber Composite",
-    "weight": "47g Ultra-Lightweight",
-    "sensor": "ROG AimPoint Pro (42K DPI)",
-    "polling": "8000Hz Wireless Polling"
+      "id": "08",
+      "category": "PRECISION INPUT",
+      "name": "ASUS ROG Harpe Ace Extreme",
+      "image": "images/harpeaceextreme.jpeg",
+      "link": "https://www.amazon.com/ASUS-ROG-Wireless-Lightweight-AimPoint/dp/B0D65GJF7C?crid=1TH6AOM806UQR&dib=eyJ2IjoiMSJ9.cjB35Zr-vd0Sh-rgV5v_Xm3eoBiuMIOzFgfZ0uB_4-fZnz2FyyaHaxzk2L-RfW0KDWlTGDpaYv-JqS6QqAz6y8bdsB19u8gTwxqC20DOjwfOTMa_3b_dTXVYvPEp_dKY9WuxaiGg73OaKOUMzGugZTjYBN58eGsj1RFSMxpyZXDiG1BxvukT28dtfQZC_sjr5BhsQITHjsCPApfUw64YBeYT23yUpQi9FLUiBVL27VA.YevA8DeyHnhyO4_xVtmjE-oyA_7-DdmFUAlUi_feq2k&dib_tag=se&keywords=asus%2Brog%2Bharpe%2Bace%2B2%2Bextreme&qid=1773029311&sprefix=asus%2Brog%2Bharpe%2Bace%2B2%2Bextreme%2Caps%2C175&sr=8-1&th=1&linkCode=ll2&tag=cungaro623-20&linkId=0084a5deb169ca925268965e12980fde&language=en_US&ref_=as_li_ss_tl",
+      "description": "The peak of precision engineering. A 47g carbon fiber shell housing a 42K DPI sensor with track-on-glass technology for flawless performance in any field environment.",
+      "specs": {
+        "material": "Carbon Fiber Composite",
+        "weight": "47g Ultra-Lightweight",
+        "sensor": "ROG AimPoint Pro (42K DPI)",
+        "polling": "8000Hz Wireless Polling"
       }
     }
   ]
