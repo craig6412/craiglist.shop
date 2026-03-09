@@ -231,6 +231,55 @@ nav ul li a.active { color: var(--primary); }
 
 .placeholder { border: 2px dashed #e2e8f0; background: transparent; text-align: center; color: #94a3b8; }
 
+/*mobile*/ 
+
+/* Mobile Optimization Overrides */
+@media (max-width: 768px) {
+    * { cursor: auto; } /* Remove crosshair on mobile */
+
+    header {
+        padding: 1rem 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Scales down the big header */
+    }
+
+    .grid {
+        padding: 0 5%;
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .featured-pick {
+        padding: 2rem 1.5rem;
+    }
+
+    .pick-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .spec-list {
+        grid-template-columns: 1fr; /* Specs stack on mobile */
+    }
+
+    /* Keep the glass effect strong on mobile */
+    .card, .item-card, .featured-pick {
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+
+} 
 /* Footer */
 footer {
     margin-top: 8rem;

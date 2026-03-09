@@ -7,39 +7,37 @@
       "link": "https://www.amazon.com/ASUS-Strix-Gaming-Laptop-Nebula/dp/B0CRDBL77S/",
       "description": "My primary workstation for heavy lifting. The i9-14900HX handles complex builds and RF analysis without breaking a sweat.",
       "specs": {
-          "cpu": "Intel Core i9-14900HX",
-          "gpu": "NVIDIA RTX 4060",
-          "display": "16\" QHD+ 240Hz Nebula",
-          "cooling": "Tri-Fan Technology"
+        "cpu": "Intel Core i9-14900HX",
+        "gpu": "NVIDIA RTX 4060",
+        "display": "16\" QHD+ 240Hz Nebula",
+        "cooling": "Tri-Fan Technology"
       }
     },
-
     {
-      "id": "03",
+      "id": "02",
       "category": "ESPORTS INPUT",
       "name": "Razer Huntsman V3 Pro TKL",
       "link": "https://amzn.to/40U5XDs",
       "description": "Analog optical switches with Rapid Trigger. This is the ultimate competitive edge for precise movement and speed.",
       "specs": {
-          "switches": "Razer Gen-2 Analog Optical",
-          "actuation": "0.1mm - 4.0mm Adjustable",
-          "polling": "8000Hz HyperPolling",
-          "keycaps": "Doubleshot PBT"
+        "switches": "Razer Gen-2 Analog Optical",
+        "actuation": "0.1mm - 4.0mm Adjustable",
+        "polling": "8000Hz HyperPolling",
+        "keycaps": "Doubleshot PBT"
+      }
+    },
+    {
+      "id": "03",
+      "category": "INTERFACE SURFACE",
+      "name": "ASUS ROG Scabbard II (XXL)",
+      "link": "https://amzn.to/4aZynSA",
+      "description": "A massive, military-grade workspace for hardware deployments. The nano-coating repels the liquids and dust common in field environments while maintaining a smooth glide.",
+      "specs": {
+        "dimensions": "900 x 400 x 3 mm",
+        "material": "Protective Nano-Coated Fabric",
+        "durability": "Water, Oil, and Dust Repellent",
+        "base": "Non-Slip Rubber"
       }
     }
   ]
-}, 
-
-{
-  "id": "04",
-  "category": "INTERFACE SURFACE",
-  "name": "ASUS ROG Scabbard II (XXL)",
-  "link": "https://amzn.to/4aZynSA",
-  "description": "A massive, military-grade workspace for hardware deployments. The nano-coating repels the liquids and dust common in field environments while maintaining a smooth glide.",
-  "specs": {
-    "dimensions": "900 x 400 x 3 mm",
-    "material": "Protective Nano-Coated Fabric",
-    "durability": "Water, Oil, and Dust Repellent",
-    "base": "Non-Slip Rubber"
-  }
 }
