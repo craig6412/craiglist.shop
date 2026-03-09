@@ -40,7 +40,7 @@
                     section.className = 'featured-pick reveal';
                     section.innerHTML = `
                         <div class="pick-badge">#${item.id} // ${item.category}</div>
-                        <div class="pick-content">
+                        <div class="pick-content flex-layout">
                             <div class="pick-info">
                                 <h2>${item.name}</h2>
                                 <p class="pick-description">${item.description}</p>
@@ -48,6 +48,9 @@
                                     ${Object.entries(item.specs).map(([key, val]) => `<li><strong>${key.toUpperCase()}:</strong> ${val}</li>`).join('')}
                                 </ul>
                                 <a href="${item.link}" target="_blank" class="btn-amazon">VIEW ON AMAZON</a>
+                            </div>
+                            <div class="pick-image">
+                                <img src="${item.image}" alt="${item.name}">
                             </div>
                         </div>
                     `;

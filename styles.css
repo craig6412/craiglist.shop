@@ -280,6 +280,51 @@ nav ul li a.active { color: var(--primary); }
     }
 
 } 
+
+/*new layout design for product images */
+
+/* Arsenal Side-by-Side Layout */
+.flex-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.pick-info {
+    flex: 1; /* Takes up most of the space */
+}
+
+.pick-image {
+    flex: 0 0 350px; /* Fixed width for the image area */
+    display: flex;
+    justify-content: center;
+}
+
+.pick-image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 12px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+/* Mobile Fix: Stack them when screen is small */
+@media (max-width: 992px) {
+    .flex-layout {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .pick-image {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .spec-list {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Footer */
 footer {
     margin-top: 8rem;
