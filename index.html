@@ -66,28 +66,35 @@
     </footer>
 
     <script>
-        // 1. Fetch JSON Data and Populate Homepage
+        // 1. Fetch JSON Data and Populate Homepage with Images
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
                 const grid = document.getElementById('homepage-loadout-grid');
-                // We only want the first 2 items for the homepage
+                // Slice for Top 2 items on Home Page
                 const topTwo = data.loadout.slice(0, 2);
 
                 topTwo.forEach((item, index) => {
                     const card = document.createElement('div');
                     card.className = index === 0 ? 'item-card featured-item' : 'item-card';
+                    
                     card.innerHTML = `
                         <div class="tag">${index === 0 ? '#1 PICK // ' : ''}${item.category}</div>
+                        
+                        <div class="card-img-wrapper">
+                            <img src="${item.image}" alt="${item.name}" class="home-card-img">
+                        </div>
+
                         <h3>${item.name}</h3>
                         <p>${item.description}</p>
                         <a href="${item.link}" target="_blank" class="${index === 0 ? 'btn-primary' : 'btn-sm'}" style="margin-top: 2rem;">VIEW ON AMAZON</a>
                     `;
+                    
                     grid.appendChild(card);
-                    // Initialize animations for new cards
                     observeCard(card);
                 });
-            });
+            })
+            .catch(err => console.error("Error loading loadout data:", err));
 
         // 2. Typewriter Effect
         const text = "Exploring the frontier of Gadgets, Hacking, and Tech Culture.";

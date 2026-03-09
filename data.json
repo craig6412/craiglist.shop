@@ -4,6 +4,7 @@
       "id": "01",
       "category": "PERFORMANCE CORE",
       "name": "ASUS ROG Strix G16 (2024)",
+      "image": "https://m.media-amazon.com/images/I/817-v9itS7L._AC_SL1500_.jpg",
       "link": "https://www.amazon.com/ASUS-Strix-Gaming-Laptop-Nebula/dp/B0CRDBL77S/",
       "description": "My primary workstation for heavy lifting. The i9-14900HX handles complex builds and RF analysis without breaking a sweat.",
       "specs": {
@@ -17,6 +18,7 @@
       "id": "02",
       "category": "ESPORTS INPUT",
       "name": "Razer Huntsman V3 Pro TKL",
+      "image": "https://m.media-amazon.com/images/I/71N2T-rLz2L._AC_SL1500_.jpg",
       "link": "https://amzn.to/40U5XDs",
       "description": "Analog optical switches with Rapid Trigger. This is the ultimate competitive edge for precise movement and speed.",
       "specs": {
@@ -30,6 +32,7 @@
       "id": "03",
       "category": "INTERFACE SURFACE",
       "name": "ASUS ROG Scabbard II (XXL)",
+      "image": "https://m.media-amazon.com/images/I/71Xm-j9O6KL._AC_SL1500_.jpg",
       "link": "https://amzn.to/4aZynSA",
       "description": "A massive, military-grade workspace for hardware deployments. The nano-coating repels the liquids and dust common in field environments while maintaining a smooth glide.",
       "specs": {
