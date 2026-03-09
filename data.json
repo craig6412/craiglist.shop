@@ -61,7 +61,7 @@
       "category": "DUAL BOOT DRIVE",
       "name": "SanDisk Extreme PRO Dual Luxe",
       "image": "images/sandiskdual.jpeg",
-      "link": "https://www.amazon.com/SanDisk-256GB-Extreme-PRO-Drive/dp/B0C659S35M?tag=cungaro623-20",
+      "link": "https://www.amazon.com/SANDISK-256GB-Extreme-Drive-Type/dp/B0FY7GQT42?adgrpid=1333708168616147&dib=eyJ2IjoiMSJ9.OQE1uaI1xGo6YigDn0LLlFGR0pK3DelPcub2UVMVXTFizjT3SN3JW3T6pk-YbH3tLgGyW5OSoCcOG-VehBZZBzsX-7FsqFaLmbC3r4OcyeLjWKif0D4ZmHcDKAJApDyDi9YfBiZKU8q02iJZtylwzCKbqJn0JWBJscZzGNKSHZ3RBLcHDBdUYSpzIYI9ujYTrDoex5N8wMMg1DRSpP8eR0jFxfAJtmYZC6HFE8G33R0.2hgc4AAPZWvj6uM0AYUpk0SXXKixg7ptpRT41_80Alw&dib_tag=se&hvadid=83356975341002&hvbmt=be&hvdev=c&hvlocphy=72724&hvnetw=o&hvqmt=e&hvtargid=kwd-83357102886424%3Aloc-190&hydadcr=18036_13443497&keywords=sandisk%2Bextreme%2Bpro%2B256gb&mcid=01c3e93ed4143b4c9f324438ddd20829&qid=1773029105&sr=8-1&th=1&linkCode=ll2&tag=cungaro623-20&linkId=d53066655e6f5b432c0346d487c6ca55&language=en_US&ref_=as_li_ss_tl",
       "description": "2-in-1 flash drive with USB-C and USB-A. Provides 1,000MB/s speeds for ultra-responsive persistent Kali Linux booting.",
       "specs": {
         "interface": "USB-C & USB-A (3.2 Gen 2)",
@@ -89,7 +89,7 @@
       "category": "TECH ORGANIZATION",
       "name": "Peak Design Tech Pouch",
       "image": "images/peakpouch.jpeg",
-      "link": "https://www.amazon.com/Peak-Design-Tech-Pouch-Black/dp/B07GZ5S1K4?tag=cungaro623-20",
+      "link": "https://www.amazon.com/Peak-Design-Pouch-Black-BTP-BK-3/dp/B0DCKB2ZJ3?dib=eyJ2IjoiMSJ9.7nPu3Zb5-Jx6m-VCVaO8nxPHF55s413Jm56SIRjT5FVuDmQT0RL0ojf3Yt9befsXZhUtnKs3QmUdL4-FqBdtwOJmvHIla-PyJE9jx-M6f_yDAonLky-1Ey-V-mdSbKhfek_jezVD4ku9JL4-0e3km_B5WeHXzrvVKuI0SPGKpyTo3uIwSqLGQ2nyNlpebdIm61CGdGQdD5X1L5HdP2-5agNeEaqWlrJwh_l79Y15YKs.GNqKdhsUj1e1FWqS8C55P-2vIDgsXZvM5Yg9FDuhVqE&dib_tag=se&keywords=peak%2Bdesign%2Btech%2Bpouch%2Bblack&qid=1773029202&sr=8-3&th=1&linkCode=ll2&tag=cungaro623-20&linkId=f529fca1c5d5ec90b2099a58d540058c&language=en_US&ref_=as_li_ss_tl",
       "description": "Origami-style internal pockets create massive spatial efficiency. Keeps hacking tools and cables organized and accessible.",
       "specs": {
         "material": "400D Weatherproof Nylon",
@@ -98,21 +98,18 @@
         "charging": "Cable Pass-Through"
       }
     },
-    {
-      "id": "08",
-      "category": "PRECISION INPUT",
-      "name": "ASUS ROG Harpe Ace",
-      "image": "images/harpeace.jpeg",
-      "link": "https://www.amazon.com/ASUS-Ultra-Lightweight-Connectivity-Optimizer-Programmable/dp/B0BRCW8B2G?tag=cungaro623-20",
-      "description": "Ultra-lightweight 54g precision mouse developed with Aim Lab. High-accuracy 36k DPI sensor for technical field work.",
-      "specs": {
-        "weight": "54g Ultra-Light",
-        "sensor": "ROG AimPoint 36k DPI",
-        "connectivity": "Tri-Mode (RF/BT/Wired)",
-        "switches": "ROG Micro (70M Clicks)"
-      }
-    }
-  ]
+{
+  "id": "08",
+  "category": "PRECISION INPUT",
+  "name": "ASUS ROG Harpe Ace Extreme",
+  "image": "images/harpeaceextreme.jpeg",
+  "link": "https://www.amazon.com/ASUS-ROG-Wireless-Lightweight-AimPoint/dp/B0D65GJF7C?crid=1TH6AOM806UQR&dib=eyJ2IjoiMSJ9.cjB35Zr-vd0Sh-rgV5v_Xm3eoBiuMIOzFgfZ0uB_4-fZnz2FyyaHaxzk2L-RfW0KDWlTGDpaYv-JqS6QqAz6y8bdsB19u8gTwxqC20DOjwfOTMa_3b_dTXVYvPEp_dKY9WuxaiGg73OaKOUMzGugZTjYBN58eGsj1RFSMxpyZXDiG1BxvukT28dtfQZC_sjr5BhsQITHjsCPApfUw64YBeYT23yUpQi9FLUiBVL27VA.YevA8DeyHnhyO4_xVtmjE-oyA_7-DdmFUAlUi_feq2k&dib_tag=se&keywords=asus%2Brog%2Bharpe%2Bace%2B2%2Bextreme&qid=1773029311&sprefix=asus%2Brog%2Bharpe%2Bace%2B2%2Bextreme%2Caps%2C175&sr=8-1&th=1&linkCode=ll2&tag=cungaro623-20&linkId=0084a5deb169ca925268965e12980fde&language=en_US&ref_=as_li_ss_tl",
+  "description": "The peak of precision engineering. A 47g carbon fiber shell housing a 42K DPI sensor with track-on-glass technology for flawless performance in any field environment.",
+  "specs": {
+    "material": "Carbon Fiber Composite",
+    "weight": "47g Ultra-Lightweight",
+    "sensor": "ROG AimPoint Pro (42K DPI)",
+    "polling": "8000Hz Wireless Polling"
+  }
 }
-  ]
-}
+  
