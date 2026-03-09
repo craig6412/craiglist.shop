@@ -16,9 +16,7 @@
     
     <header>
         <nav>
-            <div class="logo">
-                <img src="images/craiglistlogo.png" alt="Craiglist-Hackingtools Logo" class="header-logo-img">
-            </div>
+            <div class="logo">CRAIGLIST<span class="cursor-blink">.SHOP</span></div>
             <ul>
                 <li><a href="#intel" class="nav-link">INTEL</a></li>
                 <li><a href="arsenal.html" class="nav-link">ARSENAL</a></li>
@@ -28,21 +26,21 @@
     </header>
 
     <section class="hero">
-    <div class="hero-content">
-        <div class="terminal-header">
-            <span class="status-indicator">● ONLINE</span>
-            <h1 class="glitch" data-text="FIELD_KIT_ACCESS">Access Granted</h1>
-        </div>
-        
-        <div class="status-log">
-            <p id="typewriter" class="terminal-text"></p>
-        </div>
+        <div class="hero-content">
+            <div class="terminal-header">
+                <span class="status-indicator">● ONLINE</span>
+                <h1 class="glitch" data-text="FIELD_KIT_ACCESS">Access Granted</h1>
+            </div>
+            
+            <div class="status-log">
+                <p id="typewriter" class="terminal-text"></p>
+            </div>
 
-        <div class="hero-actions">
-            <a href="#loadout" class="btn-primary">ACCESS LOADOUT [8/8]</a>
+            <div class="hero-actions">
+                <a href="#loadout" class="btn-primary">ACCESS LOADOUT [8/8]</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <main>
         <section id="loadout">
@@ -110,7 +108,6 @@
             .catch(err => console.error("Error loading loadout data:", err));
 
         // 2. Updated Typewriter Effect to match Hacking Tools niche
-        // This is where you can update the status log content
         const text = "SYSTEM_SCAN: [STRIX_G16_DETECTED] // RF_STATUS: ACTIVE // [8/8]_LOADOUT_UNITS_READY...";
         let i = 0;
         const target = document.getElementById('typewriter');

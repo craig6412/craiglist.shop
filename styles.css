@@ -47,39 +47,40 @@ body {
 
 /* --- NAVIGATION --- */
 header {
-    padding: 1rem 10%; /* EDIT: Slightly tighter padding for image height */
+    padding: 1.5rem 10%;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     position: sticky; top: 0; z-index: 50;
-    background: rgba(5, 5, 5, 0.8); /* Added slight bg for backdrop blur */
+    background: rgba(5, 5, 5, 0.8);
 }
 
 nav { display: flex; justify-content: space-between; align-items: center; }
 
-/* --- MERGED LOGO STYLES (TEXT TO IMAGE) --- */
+/* REVERTED: NAVIGATION LOGO (TEXT-BASED) */
 .logo {
-    display: flex; /* Ensures vertical alignment */
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900; 
+    font-size: 1.4rem;
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+    display: flex;
     align-items: center;
-    /* EDIT: Orbitron font rules removed; no longer needed for image logo */
 }
 
-/* MERGED: Specific rule for the image inside the .logo container */
-.header-logo-img {
-    height: 40px; /* Target height to match nav links */
-    width: auto;   /* Preserves aspect ratio */
-    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5)); /* MERGED: Preserves the text-shadow glow effect */
-    transition: 0.3s ease; /* For smooth hovering effects */
+.logo span { 
+    font-family: 'JetBrains Mono', monospace; 
+    font-weight: 400; 
 }
 
-/* MERGED: Add a subtle glow pulse on hover for interactivity */
-.header-logo-img:hover {
-    filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.8));
-    transform: scale(1.03); /* Tiny scale up on hover */
+/* RE-ENABLED: TERMINAL CURSOR BLINK */
+.cursor-blink { 
+    animation: blink 1s step-end infinite; 
+    color: #fff; 
 }
 
-/* MERGED: Blinking cursor rules removed; image logo has a static underscore cursor */
-/* .cursor-blink { animation: blink 1s step-end infinite; color: #fff; } */
-/* @keyframes blink { 50% { opacity: 0; } } */
+@keyframes blink { 
+    50% { opacity: 0; } 
+}
 
 nav ul { display: flex; list-style: none; }
 nav ul li { margin-left: 2rem; }
@@ -277,9 +278,7 @@ footer {
 .disclaimer { color: var(--accent); font-size: 0.7rem; margin-bottom: 1rem; font-weight: bold; }
 footer p { font-size: 0.7rem; opacity: 0.6; }
 
-/* --- MOBILE OPTIMIZATION (BREAKPOINTS) --- */
-
-/* Medium Devices (Tablets/Laptops) */
+/* --- MOBILE OPTIMIZATION --- */
 @media (max-width: 992px) {
     .flex-layout {
         flex-direction: column-reverse;
@@ -292,22 +291,16 @@ footer p { font-size: 0.7rem; opacity: 0.6; }
     }
 }
 
-/* Small Devices (Phones) */
 @media (max-width: 768px) {
     * { cursor: auto; }
-
     header { padding: 1rem 5%; }
     nav { flex-direction: column; gap: 1rem; }
     nav ul { gap: 1rem; justify-content: center; width: 100%; }
-
     .hero h1 { font-size: 2.5rem; }
     .grid { padding: 0 5%; grid-template-columns: 1fr; }
-
     .featured-pick { padding: 2rem 1.5rem; }
     .pick-info h2 { font-size: 1.8rem; }
     .spec-list { grid-template-columns: 1fr; }
-
-    /* Button full-width on mobile for easier tapping */
     .btn-primary, .btn-amazon, .btn-sm {
         width: 100%;
         text-align: center;
