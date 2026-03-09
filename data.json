@@ -4,8 +4,8 @@
       "id": "01",
       "category": "PERFORMANCE CORE",
       "name": "ASUS ROG Strix G16 (2024)",
-      "image": "https://m.media-amazon.com/images/I/817-v9itS7L._AC_SL1500_.jpg",
-      "link": "https://www.amazon.com/ASUS-Strix-Gaming-Laptop-Nebula/dp/B0CRDBL77S/",
+      "image": "images/AsusLaptop2025.jpg",
+      "link": "https://www.amazon.com/ASUS-Strix-Gaming-Laptop-Nebula/dp/B0DW1FVPK8?crid=2O5OFNT5NRAH4&dib=eyJ2IjoiMSJ9.TjE8w4xuPJzAbcvWIkUpzEYIuor2r4Aa4aMzGjZ2u1vI9alhMS1EcmA-ONSIcqLUzfdP6h0XwWSeWsdq05Z5XZmDMb3K9d02ESzndW7w3z167G6UA3355m1zv8k8S4FsTxdQvW1X7ee0QX1tuRYKiZys3J048Kwo1JUeoOWIqWk1efN2dWhFPF1p4sf7pnALPLzAa1Cfhgs-HU-j33THpIppjUzQZgUQVLkxU1xsOE86wrZYN_evTSnQ6aTT_gVtPiwxmiWCRUwtVKBOrDcC_5ig49HDEpCb7tEgPaC9vbA.W8n0Rfyd6_F5BoCZQYba1QbVBIemVwlIeQaNUhwYRdg&dib_tag=se&keywords=asus%2Brog%2Bstrix%2Bg16&qid=1773027222&s=electronics&sprefix=asus%2Bstrix%2B%2Celectronics%2C151&sr=1-7&th=1&linkCode=ll2&tag=cungaro623-20&linkId=74c30548cd1cc31417cbf96b34ca835b&language=en_US&ref_=as_li_ss_tl",
       "description": "My primary workstation for heavy lifting. The i9-14900HX handles complex builds and RF analysis without breaking a sweat.",
       "specs": {
         "cpu": "Intel Core i9-14900HX",
@@ -18,8 +18,8 @@
       "id": "02",
       "category": "ESPORTS INPUT",
       "name": "Razer Huntsman V3 Pro TKL",
-      "image": "https://m.media-amazon.com/images/I/71N2T-rLz2L._AC_SL1500_.jpg",
-      "link": "https://amzn.to/40U5XDs",
+      "image": "images/razerhuntsman.jpeg",
+      "link": "https://www.amazon.com/Razer-Huntsman-Esports-Gaming-Keyboard/dp/B0CG7BWG7J?crid=129RAYJWR3UTW&dib=eyJ2IjoiMSJ9.26ARydkSAQQFdJH8S-t13q7ar_3i4W4th3XR4frYo3n4QoLzwp6Cu47rX9p73ZyEJPexPaT9IJO1LiDdhzmrV03GowkxC6zscxrRcETgWKDOo2MNOrw2xcHjEyU5INOMe4nsshXvNp3udADNrluw0YEb6YllpIfCXArhO8j6tdDdoKLwCmWNfxtzBE1oBzqf1qaH5jfznC2zZnL8lFl_N8oypLQ2DyoumNXxoZtg-8RIuMrme60UK0Wt6suXRk0YD8PeKKIL2fCP4BBoAIOVcLaMvgktCcN5auFWhgWOhcc.QEmFCbLm0wRu7fkJcLHenPXhDoPDyMAzazAfl2cEPAA&dib_tag=se&keywords=razer%2Bhuntsman%2Bv3%2Bpro%2Btkl&qid=1773026940&s=electronics&sprefix=razer%2Bhuntsman%2Bv3%2Bpro%2Btkl%2Celectronics%2C124&sr=1-1&th=1&linkCode=ll2&tag=cungaro623-20&linkId=3fa4a7d2839f21ed1e44c9c800bdca0b&language=en_US&ref_=as_li_ss_tl",
       "description": "Analog optical switches with Rapid Trigger. This is the ultimate competitive edge for precise movement and speed.",
       "specs": {
         "switches": "Razer Gen-2 Analog Optical",
@@ -32,8 +32,8 @@
       "id": "03",
       "category": "INTERFACE SURFACE",
       "name": "ASUS ROG Scabbard II (XXL)",
-      "image": "https://m.media-amazon.com/images/I/71Xm-j9O6KL._AC_SL1500_.jpg",
-      "link": "https://amzn.to/4aZynSA",
+      "image": "images/asusscabbard.jpeg",
+      "link": "https://www.amazon.com/ASUS-ROG-Scabbard-II-XXL/dp/B0FJS6CGGQ?crid=2O7FBWF39YLX9&dib=eyJ2IjoiMSJ9.UWN37oAxYiXlSJRi2qHvrHdcPi-FcBSi1yKnnxVDLCXO4WoKFE4hvOxYbe8fnD5szrrCL7oNwRA_TbTxoIFhQuLVG-lJ4TegRpayQ2HKaqUMQw2sSOxzMWxKboQhoggaQVi-O2wS_Hh5JYoYrvUbfnTqsRwcfI1CU-65lNp-Yc3FWIiKLaoepo7jorBhnq7x.EamkB1O3aNqP0dGpKmAwiq-pMSKfgLAbeWbow9JQstQ&dib_tag=se&keywords=asus%2Bscabbard%2Bii&qid=1773027159&s=electronics&sprefix=asus%2Bscabbard%2Bii%2Celectronics%2C166&sr=1-1&th=1&linkCode=ll2&tag=cungaro623-20&linkId=a752262e4959ed64e7bdfac0687c2cc7&language=en_US&ref_=as_li_ss_tl",
       "description": "A massive, military-grade workspace for hardware deployments. The nano-coating repels the liquids and dust common in field environments while maintaining a smooth glide.",
       "specs": {
         "dimensions": "900 x 400 x 3 mm",
