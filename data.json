@@ -1,7 +1,7 @@
 {
   "loadout": [
     {
-      "id": "01",
+     "id": "01",
       "category": "PERFORMANCE CORE",
       "name": "ASUS ROG Strix G16 (2024)",
       "image": "images/AsusLaptop2025.jpg",
@@ -15,7 +15,7 @@
       }
     },
     {
-      "id": "02",
+        "id": "02",
       "category": "ESPORTS INPUT",
       "name": "Razer Huntsman V3 Pro TKL",
       "image": "images/razerhuntsman.jpeg",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "03",
+     "id": "03",
       "category": "INTERFACE SURFACE",
       "name": "ASUS ROG Scabbard II (XXL)",
       "image": "images/asusscabbard.jpeg",
@@ -43,7 +43,7 @@
       }
     },
     {
-  "id": "04",
+       "id": "04",
   "category": "TACTICAL CARRY",
   "name": "Wenger Synergy Wheeled Backpack",
   "image": "images/wengersynergy.jpeg",
@@ -54,10 +54,10 @@
     "protection": "Triple Protect Padded Compartment",
     "storage": "Essentials Organizer & Tablet Pocket",
     "comfort": "Shock-Absorbing Shoulder Straps"
-  }
-},
+      }
+    },
     {
-      "id": "05",
+          "id": "05",
       "category": "DUAL BOOT DRIVE",
       "name": "SanDisk Extreme PRO Dual Luxe",
       "image": "images/sandiskdual.jpeg",
@@ -68,6 +68,7 @@
         "read_speed": "Up to 1,000MB/s",
         "construction": "All-Metal Swivel Heatsink",
         "capacity": "256GB High-Speed"
+
       }
     },
     {
@@ -85,7 +86,7 @@
       }
     },
     {
-      "id": "07",
+       "id": "07",
       "category": "TECH ORGANIZATION",
       "name": "Peak Design Tech Pouch",
       "image": "images/peakpouch.jpeg",
@@ -95,11 +96,10 @@
         "material": "400D Weatherproof Nylon",
         "volume": "2L Capacity",
         "design": "Origami Fold Organization",
-        "charging": "Cable Pass-Through"
-      }
+        "charging": "Cable Pass-Through"      }
     },
-{
-  "id": "08",
+    {
+    "id": "08",
   "category": "PRECISION INPUT",
   "name": "ASUS ROG Harpe Ace Extreme",
   "image": "images/harpeaceextreme.jpeg",
@@ -110,6 +110,7 @@
     "weight": "47g Ultra-Lightweight",
     "sensor": "ROG AimPoint Pro (42K DPI)",
     "polling": "8000Hz Wireless Polling"
-  }
+      }
+    }
+  ]
 }
-],

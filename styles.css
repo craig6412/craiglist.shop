@@ -47,24 +47,39 @@ body {
 
 /* --- NAVIGATION --- */
 header {
-    padding: 1.5rem 10%;
+    padding: 1rem 10%; /* EDIT: Slightly tighter padding for image height */
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     position: sticky; top: 0; z-index: 50;
+    background: rgba(5, 5, 5, 0.8); /* Added slight bg for backdrop blur */
 }
 
 nav { display: flex; justify-content: space-between; align-items: center; }
 
+/* --- MERGED LOGO STYLES (TEXT TO IMAGE) --- */
 .logo {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900; font-size: 1.4rem;
-    color: var(--primary);
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+    display: flex; /* Ensures vertical alignment */
+    align-items: center;
+    /* EDIT: Orbitron font rules removed; no longer needed for image logo */
 }
 
-.logo span { font-family: 'JetBrains Mono', monospace; font-weight: 400; }
-.cursor-blink { animation: blink 1s step-end infinite; color: #fff; }
-@keyframes blink { 50% { opacity: 0; } }
+/* MERGED: Specific rule for the image inside the .logo container */
+.header-logo-img {
+    height: 40px; /* Target height to match nav links */
+    width: auto;   /* Preserves aspect ratio */
+    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5)); /* MERGED: Preserves the text-shadow glow effect */
+    transition: 0.3s ease; /* For smooth hovering effects */
+}
+
+/* MERGED: Add a subtle glow pulse on hover for interactivity */
+.header-logo-img:hover {
+    filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.8));
+    transform: scale(1.03); /* Tiny scale up on hover */
+}
+
+/* MERGED: Blinking cursor rules removed; image logo has a static underscore cursor */
+/* .cursor-blink { animation: blink 1s step-end infinite; color: #fff; } */
+/* @keyframes blink { 50% { opacity: 0; } } */
 
 nav ul { display: flex; list-style: none; }
 nav ul li { margin-left: 2rem; }

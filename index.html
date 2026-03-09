@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Craiglist | Expert Tech Reviews & RF Analysis</title>
+    <title>Craiglist-Hackingtools | Access Granted</title>
+    
+    <link rel="icon" type="image/png" href="images/craiglistlogo.png">
+
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,7 +16,9 @@
     
     <header>
         <nav>
-            <div class="logo">CRAIGLIST<span class="cursor-blink">.SHOP</span></div>
+            <div class="logo">
+                <img src="images/craiglistlogo.png" alt="Craiglist-Hackingtools Logo" class="header-logo-img">
+            </div>
             <ul>
                 <li><a href="#intel" class="nav-link">INTEL</a></li>
                 <li><a href="arsenal.html" class="nav-link">ARSENAL</a></li>
@@ -26,7 +31,7 @@
     <div class="hero-content">
         <div class="terminal-header">
             <span class="status-indicator">● ONLINE</span>
-            <h1 class="glitch" data-text="CRAIGLIST_FIELD_KIT">Access Granted</h1>
+            <h1 class="glitch" data-text="FIELD_KIT_ACCESS">Access Granted</h1>
         </div>
         
         <div class="status-log">
@@ -78,10 +83,11 @@
             .then(response => response.json())
             .then(data => {
                 const grid = document.getElementById('homepage-loadout-grid');
-                // Slice for Top 2 items on Home Page
-                const topTwo = data.loadout.slice(0, 2);
+                
+                // CRITICAL EDIT: Change from '2' to '8' to slice all units
+                const tacticalLoadout = data.loadout.slice(0, 8);
 
-                topTwo.forEach((item, index) => {
+                tacticalLoadout.forEach((item, index) => {
                     const card = document.createElement('div');
                     card.className = index === 0 ? 'item-card featured-item' : 'item-card';
                     
@@ -103,8 +109,9 @@
             })
             .catch(err => console.error("Error loading loadout data:", err));
 
-        // 2. Typewriter Effect
-        const text = "Exploring the frontier of Gadgets, Hacking, and Tech Culture.";
+        // 2. Updated Typewriter Effect to match Hacking Tools niche
+        // This is where you can update the status log content
+        const text = "SYSTEM_SCAN: [STRIX_G16_DETECTED] // RF_STATUS: ACTIVE // [8/8]_LOADOUT_UNITS_READY...";
         let i = 0;
         const target = document.getElementById('typewriter');
         function typeWriter() {
