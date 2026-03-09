@@ -13,12 +13,12 @@
           "cooling": "Tri-Fan Technology"
       }
     },
-    
+
     {
       "id": "03",
       "category": "ESPORTS INPUT",
       "name": "Razer Huntsman V3 Pro TKL",
-      "link": "https://www.amazon.com/Razer-Huntsman-Esports-Gaming-Keyboard/dp/B0GFXSYH6H/",
+      "link": "https://amzn.to/40U5XDs",
       "description": "Analog optical switches with Rapid Trigger. This is the ultimate competitive edge for precise movement and speed.",
       "specs": {
           "switches": "Razer Gen-2 Analog Optical",
@@ -28,4 +28,18 @@
       }
     }
   ]
+}, 
+
+{
+  "id": "04",
+  "category": "INTERFACE SURFACE",
+  "name": "ASUS ROG Scabbard II (XXL)",
+  "link": "https://amzn.to/4aZynSA",
+  "description": "A massive, military-grade workspace for hardware deployments. The nano-coating repels the liquids and dust common in field environments while maintaining a smooth glide.",
+  "specs": {
+    "dimensions": "900 x 400 x 3 mm",
+    "material": "Protective Nano-Coated Fabric",
+    "durability": "Water, Oil, and Dust Repellent",
+    "base": "Non-Slip Rubber"
+  }
 }
